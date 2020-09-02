@@ -1,6 +1,6 @@
 <?php
 
-$speelgoed = [
+$multi_array_speelgoed = [
 
     [
         'naam' => 'bal',
@@ -20,7 +20,7 @@ $speelgoed = [
 ];
 
 
-$games = [
+$multi_array_games = [
     'sport' => [
         'naam' => 'Fifa',
         'uitgever' => 'EA',
@@ -37,3 +37,7 @@ $games = [
         'prijs' => '40.00'
     ]
 ];
+echo $multi_array_games['sport'];
+echo $multi_array_games['action'];
+
+
