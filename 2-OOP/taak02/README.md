@@ -22,6 +22,7 @@ class Student{
 $nieuweStudent = new Student();
 $nieuweStudent->voornaam = 'Marcel';
 echo $nieuweStudent->voornaam; //Marcel
+
 ```
 
 
