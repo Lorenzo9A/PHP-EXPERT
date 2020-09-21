@@ -1,5 +1,3 @@
-[11:17] Bruce Amende
-    
 
 <?php
  
