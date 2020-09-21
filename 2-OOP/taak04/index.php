@@ -1,7 +1,7 @@
 
 <?php
  
-classScooter{
+class Scooter{
 $merk;
 $kleur;
 $inhoudTank;
