@@ -17,3 +17,5 @@ In deze module ga je aan de slag met complexere arrays: `multidimensionale array
 > [W3 Schools - PHP Arrays](https://www.w3schools.com/php/php_arrays_associative.asp)  
 > [Geek For Geeks - Associative Arrays in PHP](https://www.geeksforgeeks.org/associative-arrays-in-php/)  
 >[PHP Delusions - (The only proper) PDO tutorial](https://phpdelusions.net/pdo)  
+
+;
