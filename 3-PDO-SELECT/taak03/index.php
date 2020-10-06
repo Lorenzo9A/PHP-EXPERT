@@ -1,27 +1,19 @@
 
 <?php
+$database_lokatie     = 'localhost';
+$database_naam        = 'toolsforever';
+$database_gebruiker   = 'root';
+$database_wachtwoord  = '';
  
-$host = 'localhost';
-$db   = 'toolsforever';
-$user = 'root';
-$pass = '';
-$database_connectie = new PDO("mysql:host=$database_lokatie;dbname=$database_naam", $database_gebruiker, $database_wachtwoord);
- 
-$dsn = "mysql:host=$host;dbname=$db;";
-try {
-     $pdo = new PDO($dsn, $user, $pass);
-} catch (\PDOException $e) {
-     throw new \PDOException($e->getMessage(), (int)$e->getCode());
-}
+$db_conn = new PDO("mysql:host=$database_lokatie;dbname=$database_naam", $database_gebruiker, $database_wachtwoord);
  
 $sql = 'SELECT * FROM users WHERE firstname = :Mohammed';
-$stmt = $pdo->prepare('SELECT * FROM users WHERE firstname = :Mohamed');
-$stmt->execute(['firstname' => $firstname]);
-$user = $stmt->fetch();
+$statement = $db_conn->prepare($sql); 
+$statement->execute(['firstname' => $firstname]);
+$database_gegevens = $statement->fetchAll(PDO::FETCH_ASSOC);
  
-foreach ($stmt as $row)
-{
-    echo $row['firstname'] . "\n";
+foreach($database_gegevens as $gebruiker){  
+  echo $gebruiker['firstname'] . "<br>";
 }
  
 ?>
