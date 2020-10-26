@@ -5,8 +5,9 @@
 <title>Add DATA form</title>
 </head>
 <body>
-<form action="create.php" method="post"><p> 
-<label for="firstName">First Name:</label>
-<input type="text" name="first_name" id="firstName"></p>
-<p><label for="lastName">Last Name:</label> <input type="text" name="last_name" id="lastName"></p>        
+<form action="create_location.php" method="post"><p> 
+<label for="namee">Name:</label>
+<input type="text" name="namee" id="namee"></p>
+<p><label for="adress">adress:</label> <input type="text" name="adress" id="adress"></p>
+<p><label for="city">city:</label> <input type="text" name="city" id="city"></p>                
 <input type="submit" value="Submit"></form></body></html>
