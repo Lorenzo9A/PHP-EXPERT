@@ -1,9 +1,20 @@
+
 <?php
-
-$sql = 'SELECT * FROM users WHERE email = :email AND status= :status';
-$database_connectie->prepare($sql);
-$statement->bindParam(":email", $email);
-$statement->bindParam(":status", $status);
-$user = $statement->fetch();
-
+$database_lokatie     = 'localhost';
+$database_naam        = 'toolsforever';
+$database_gebruiker   = 'root';
+$database_wachtwoord  = '';
+ 
+$db_conn = new PDO("mysql:host=$database_lokatie;dbname=$database_naam", $database_gebruiker, $database_wachtwoord);
+ 
+$sql = 'SELECT * FROM users WHERE firstname = :Mohammed';
+$statement = $db_conn->prepare($sql); 
+$statement->execute(['firstname' => $firstname]);
+$database_gegevens = $statement->fetchAll(PDO::FETCH_ASSOC);
+ 
+foreach($database_gegevens as $gebruiker){  
+  echo $gebruiker['firstname'] . "<br>";
+}
+ 
 ?>
+
