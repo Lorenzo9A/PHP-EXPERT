@@ -6,6 +6,7 @@
 
 Nu je data hebt toegevoegd moet data ook weer verwijderd worden. Let daarbij op dat je niet _alle_ data van een tabel verwijderd maar wel een enkele rij.
 
+
 Met een simpele SQL statement kun je dit bereiken.
 
 ## Leerdoelen
@@ -25,7 +26,7 @@ $id = 1;// Het cijfer 1 moet jij vervangen voor een waarde uit de GET array. $_G
 
 //VERWIJDER EEN WAARDE UIT EEN DATABASE TABEL
 $sql = "DELETE FROM products WHERE id = :ph_id";
-$stmt = $db_conn->prepare($sql); //stuur naar mysql.
+$stmt = $db_conn->prepare($sql); 
 $stmt->bindParam(":ph_id", $id );
 $stmt->execute()
 
